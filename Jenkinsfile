@@ -2,7 +2,6 @@ pipeline {
      agent any
     triggers {
 pollSCM('* * * * *')
-   
     tools {
   maven 'M2_HOME'
 }
@@ -18,8 +17,7 @@ pollSCM('* * * * *')
          stage('test') {
            steps {
               sh 'mvn test'
-
-            }
+           }
         }  
         
          stage('deploy') {
@@ -28,5 +26,4 @@ pollSCM('* * * * *')
             }
         }
     }
-}
 }
