@@ -5,12 +5,7 @@ pollSCM('* * * * *')
     tools {
   maven 'M2_HOME'
 }
- stages {
-        stage('Checkout'){
-            steps{
-                git branch: 'main', url:'https://github.com/olori-edun/geolocation.git'  
-            }
-        }
+
     stages {
         stage('maven package') {
             steps {
